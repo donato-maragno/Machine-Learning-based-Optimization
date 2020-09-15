@@ -122,3 +122,28 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Custom
+Datasets/
+models/
+modelsOL/
+ExtraNotes/
+*.csv
+diet.dat
+*.pptx
+*.docx
+*.xlsx
+
+ANN.py
+
+decision tree.py
+
+KP5i.py
+
+KPexactConstr.py
+
+KPexactConstr2.py
+
+KPexactObj.py
+
+sampleGenerator1.py

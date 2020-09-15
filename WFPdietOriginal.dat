@@ -1,0 +1,142 @@
+param:  F:                              c        V:=
+    "Beans"                             800.0    80.0   
+    "Bulgur"                            450.0    50.0
+    "Cheese"                            15000.0  85.0
+    "Fish"                              900.0    190.0
+    "Meat"                              1200.0   175.0
+    "Corn-soya blend (CSB)"             800.0    128.0
+    "Dates"                             500.0    130.0
+    "Dried skim milk (enriched) (DSM)"  1600.0   150.0
+    "Milk"                              1200.0   170.0
+    "Salt"                              800.0    120.0
+    "Lentils"                           500.0    130.0
+    "Maize"                             300.0    180.0
+    "Maize meal"                        300.0    150.0
+    "Chickpeas"                         550.0    150.0
+    "Rice"                              575.0    180.0
+    "Sorghum/millet"                    320.0    130.0
+    "Soya-fortified bulgur wheat"       1100.0   120.0
+    "Soya-fortified maize meal"         900.0    130.0
+    "Soya-fortified sorghum grits"      1300.0   140.0
+    "Soya-fortified wheat flour"        900.0    120.0
+    "Sugar"                             1000.0   170.0
+    "Oil"                               1400.0   140.0
+    "Wheat"                             300.0    170.0
+    "Wheat flour"                       300.0    170.0
+    "Wheat-soya blend (WSB)"            850.0    130.0;
+
+
+
+param:  N:        Nmin :=
+    Energy        2100.0
+    Protein       52.5
+    Fat           89.25
+    Calcium       1100.0
+    Iron          22.0
+    VitaminA      500.0
+    ThiamineB1    0.9
+    RiboflavinB2  1.4
+    NicacinB3     12.0
+    Folate        160.0
+    VitaminC      0.0
+    Iodine        150000.0;
+
+
+
+param a:
+                                    Energy  Protein Fat   Calcium   Iron  VitaminA  ThiamineB1  RiboflavinB2  NicacinB3  Folate VitaminC  Iodine  :=
+"Beans"                             335     20      1.2   143       8.2   0         0.5         0.22          2.1        180    0         0
+"Bulgur"                            350     11      1.5   23        7.8   0         0.3         0.1           5.5        38     0         0
+"Cheese"                            355     22.5    28    630       0.2   120       0.03        0.45          0.2        0      0         0
+"Fish"                              305     22      24    330       2.7   0         0.4         0.3           6.5        16     0         0
+"Meat"                              220     21      15    14        4.1   0         0.2         0.23          3.2        2      0         0
+"Corn-soya blend (CSB)"             380     18      6     513       18.5  500       0.65        0.5           6.8        0      40        0
+"Dates"                             245     2       0.5   32        1.2   0         0.09        0.1           2.2        13     0         0
+"Dried skim milk (enriched) (DSM)"  360     36      1     1257      1     1500      0.42        1.55          1          50     0         0
+"Milk"                              360     36      1     912       0.5   280       0.28        1.21          0.6        37     0         0
+"Salt"                              0       0       0     0         0     0         0           0             0          0      0         1000000
+"Lentils"                           340     20      0.6   51        9     0         0.5         0.25          2.6        0      0         0
+"Maize"                             350     10      4     13        4.9   0         0.32        0.12          1.7        0      0         0
+"Maize meal"                        360     9       3.5   10        2.5   0         0.3         0.1           1.8        0      0         0
+"Chickpeas"                         335     22      1.4   130       5.2   0         0.6         0.19          3          100    0         0
+"Rice"                              360     7       0.5   7         1.2   0         0.2         0.08          2.6        11     0         0
+"Sorghum/millet"                    335     11      3     26        4.5   0         0.34        0.15          3.3        0      0         0
+"Soya-fortified bulgur wheat"       350     17      1.5   54        4.7   0         0.25        0.13          4.2        74     0         0
+"Soya-fortified maize meal"         390     13      1.5   178       4.8   228       0.7         0.3           3.1        0      0         0
+"Soya-fortified sorghum grits"      360     15      1     40        2     0         0.2         0.1           1.7        50     0         0
+"Soya-fortified wheat flour"        360     16      1.3   211       4.8   265       0.66        0.36          4.6        0      0         0
+"Sugar"                             400     0       0     0         0     0         0           0             0          0      0         0
+"Oil"                               885     0       100   0         0     0         0           0             0          0      0         0
+"Wheat"                             330     12.3    1.5   36        4     0         0.3         0.07          5          51     0         0
+"Wheat flour"                       350     11.5    1.5   29        3.7   0         0.28        0.14          4.5        0      0         0
+"Wheat-soya blend (WSB)"            370     20      6     750       20.8  498       1.5         0.6           9.1        0      40        0;
+
+
+set  G1 :=
+    "Wheat"
+    "Maize"
+    "Wheat flour"
+    "Rice"
+    "Bulgur"
+    "Sorghum/millet"
+    "Maize meal";
+
+set  G2 :=
+    "Beans"
+    "Dates"
+    "Lentils"
+    "Chickpeas";
+
+set G3:= "Oil";
+
+set G4 :=
+    "Corn-soya blend (CSB)"
+    "Soya-fortified bulgur wheat"  
+    "Soya-fortified maize meal"
+    "Soya-fortified sorghum grits"
+    "Soya-fortified wheat flour"
+    "Wheat-soya blend (WSB)";
+
+set G5 := "Fish" 
+          "Meat" 
+          "Cheese"
+          "Milk"
+          "Dried skim milk (enriched) (DSM)";
+
+set G0 :=
+    "Wheat"
+    "Maize"
+    "Wheat flour"
+    "Rice"
+    "Bulgur"
+    "Maize meal"
+    "Soya-fortified bulgur wheat"  
+    "Soya-fortified maize meal"
+    "Soya-fortified sorghum grits"
+    "Soya-fortified wheat flour"
+    "Wheat-soya blend (WSB)"
+    "Beans"
+    "Lentils"
+    "Chickpeas" 
+    "Meat" 
+    "Cheese"
+    "Milk"
+    "Dried skim milk (enriched) (DSM)";
+
+
+
+
+param maxG1 := 500.0;
+param minG1 := 250.0;
+
+param maxG2 := 130.0;
+param minG2 := 30.0;
+
+param maxG3 := 40.0;
+param minG3 := 15.0;
+
+param maxG4 := 60.0;
+param minG4 := 0.0;
+
+param maxG5 := 40.0;
+param minG5 := 0.0;
